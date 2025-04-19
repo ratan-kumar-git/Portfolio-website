@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-500">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@400;600;700&display=swap');
+
+        .script-font {
+            font-family: 'Clicker Script', cursive;
+        }
+    </style>
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body class="bg-sky-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 relative">
+    <!-- Mobile Responsive -->
+    <nav class="md:hidden bg-slate-50 dark:bg-slate-800 w-full h-24 flex justify-between items-center p-5">
+        <div class="text-xl font-extrabold text-center">
+            <a href="/" class="bg-red-100 text-red-600 px-4 py-2 inline-block rounded tracking-wider font-serif">
+                <span class="text-3xl text-red-600 font-script">R</span>atan <span
+                    class="text-3xl text-red-600 font-script">K</span>umar</a>
+        </div>
+
+        <div class="">
+            <!-- Dark Mode Toggle Button -->
+            <button id="darkModeToggle"
+                class="md:hidden bg-gray-200 dark:bg-gray-700 py-2 px-3 mr-2 rounded-md shadow-md transition">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="md:hidden bg-indigo-600 dark:bg-gray-700 py-2 px-3 rounded-md shadow-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 left-0 h-full w-[250px] bg-white dark:bg-gray-800 p-6 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-md">
+        <div class="text-xl font-extrabold mb-10 text-center">
+            <a href="/" class="bg-red-100 text-red-600 px-4 py-2 inline-block rounded tracking-wider font-serif">
+                <span class="text-3xl text-red-600 font-script">R</span>atan <span
+                    class="text-3xl text-red-600 font-script">K</span>umar</a>
+        </div>
+        <ul class="space-y-4">
+            <li>
+                <a href="/" class="block px-4 py-2 rounded bg-indigo-600 text-white font-semibold hover:bg-indigo-700">
+                    <i class="fa fa-home mr-2"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/about"
+                    class="block px-4 py-2 rounded bg-indigo-600 text-white font-semibold hover:bg-indigo-700">
+                    <i class="fa fa-user mr-2"></i>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="/projects"
+                    class="block px-4 py-2 rounded bg-indigo-600 text-white font-semibold hover:bg-indigo-700">
+                    <i class="fa fa-briefcase mr-2"></i>
+                    Projects
+                </a>
+            </li>
+            <li><a href="/contact"
+                    class="block px-4 py-2 rounded bg-indigo-600 text-white font-semibold hover:bg-indigo-700">
+                    <i class="fa fa-comments mr-2"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+        <div class=" bottom-1 text-2xl mb-5 fixed">
+            <a href="" class="m-1"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="m-1"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="" class="m-1"><i class="fa-brands fa-github"></i></a>
+            <a href="" class="m-1"><i class="fa-solid fa-envelope"></i></a>
+            <button id="darkModeToggle2" class="ml-6 text-base bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded-md">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+    </aside>
+
+    <!-- This is Main Contant Area -->
+    <main class="md:ml-[250px] min-h-screen p-6 flex items-center justify-center">
+        {% block content %}
+        <!-- All outside of This block content render where it can be extended code write. -->
+
+        {% endblock %}
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const darkModeToggle = document.getElementById('darkModeToggle') 
+        const darkModeToggle2 = document.getElementById('darkModeToggle2') 
+        const htmlElement = document.documentElement;
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        darkModeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            darkModeToggle.innerHTML = htmlElement.classList.contains('dark')
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
+        });
+        darkModeToggle2.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            darkModeToggle.innerHTML = htmlElement.classList.contains('dark')
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
+        });
+    </script>
+</body>
+
+</html>
