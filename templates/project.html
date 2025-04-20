@@ -1,10 +1,172 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<section
-    class="min-h-screen px-10 py-10 w-full rounded-md bg-slate-50 dark:bg-slate-800">
+<section class="min-h-screen px-10 py-10 w-full rounded-md bg-slate-50 dark:bg-slate-800">
+    <h2 class="mb-10 text-center text-2xl md:text-4xl font-bold text-slate-800 dark:text-white drop-shadow-lg">
+        Projects
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-3 gap-y-5">
+        <!-- Project - 1 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="{{url_for('static', filename='images/kisan-motor-billing-light.png')}}"
+                    alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <!-- Project title -->
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Inventory Management System
+                    </h5>
+                </a>
+                <!-- project description -->
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    This project helps shop owners track stock levels, manage product details, set reorder thresholds, and
+                    generate reports with ease. The system supports user-friendly CRUD operations, category-wise sorting,
+                    priority labels, and responsive UI for both desktop and mobile use.
+                </p>
+                <p class="mb-3 italic text-gray-600 dark:text-gray-400">
+                    Tech Stack: Flask, SQLite, SQLAlchemy, Tailwind CSS, HTML5, Jinja2
+                </p>
+                <a href="https://github.com/ratan-kumar-git/Inventory-Management-System" target="_blank"
+                    class="mr-5 inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github Code
+                </a>
+                <a href="https://kisanmoter.pythonanywhere.com" target="_blank"
+                    class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Vistie Site
+                </a>
+            </div>
+        </div>
 
+        <!-- Project - 2 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="{{url_for('static', filename='images/smart-attendance.png')}}"
+                    alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <!-- Project title -->
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Face Recognition Web App
+                    </h5>
+                </a>
+                <!-- project description -->
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    A secure and smart face recognition web app built using <strong>Python (Flask)</strong>, <strong>OpenCV</strong>, and <strong>HTML/CSS</strong>. This system captures, detects, and verifies human faces in real-time using your webcam. It is designed for user authentication and attendance tracking, making it ideal for classrooms, offices, or secure login systems.
+                </p>
+                <p class="mb-3 italic text-gray-600 dark:text-gray-400">
+                    Note: College Project.
+                </p>
+                <p class="mb-3 italic text-gray-600 dark:text-gray-400">
+                    Tech Stack: Flask, OpenCV, Face Recognition Library, HTML5, CSS3, Tailwind
+                </p>
+                <a href="https://github.com/ratan-kumar-git/SmartAttendance-Project" target="_blank"
+                    class="mr-5 inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github Code
+                </a>
+                <a href="#" target="_blank"
+                    class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Vistie Site
+                </a>
+            </div>
+        </div>
 
+        <!-- Project - 3 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="{{url_for('static', filename='images/mill-dairy.png')}}"
+                    alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <!-- Project title -->
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Personal Expense Tracker
+                    </h5>
+                </a>
+                <!-- project description -->
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    A lightweight and intuitive web app that helps users track their daily expenses and income. Built using <strong>Python (Flask)</strong> and <strong>Tailwind CSS</strong>. The app features a responsive UI and easy-to-use interface, making budget management simple and accessible.
+                </p>
+                <p class="mb-3 italic text-gray-600 dark:text-gray-400">
+                    Note: My Personal Project.
+                </p>
+                <p class="mb-3 italic text-gray-600 dark:text-gray-400">
+                    Tech Stack: Flask, SQLite, Jinja2, Tailwind CSS, HTML5
+                </p>
+                <a href="https://github.com/ratan-kumar-git/MillDairy-Web" target="_blank"
+                    class="mr-5 inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github Code
+                </a>
+                <a href="https://milldairy.pythonanywhere.com/login" target="_blank"
+                    class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Vistie Site
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Language & fremwork -->
+    <div class="pt-10">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-center text-lg md:text-4xl font-bold text-slate-800 dark:text-white drop-shadow-lg">
+                Languages and Frameworks
+            </h2>
+
+            <div
+                class="mx-auto mt-20 grid max-w-lg grid-cols-3 items-center gap-x-10 gap-y-14 sm:max-w-xl sm:grid-cols-6 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+
+                <!-- HTML -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+
+                <!-- CSS -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float-slow"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+
+                <!-- JavaScript -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript">
+
+                <!-- React -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float-slow"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+
+                <!-- Python -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+
+                <!-- Flask -->
+                <img class="col-span-1 max-h-20 w-full object-contain animate-float-slow"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+
+            </div>
+        </div>
+    </div>
 </section>
 
+<style>
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .animate-float-slow {
+        animation: float 5s ease-in-out infinite;
+    }
+</style>
 {% endblock %}
